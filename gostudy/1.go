@@ -5,12 +5,12 @@ import (
 "os"
 )
 func main(){
-	var s,sep string
+	s:=","
 	fmt.Println("helloworkd\n")
-	for i:=1;i<len(os.Args);i++{
-		s+=sep+os.Args[i]
-		fmt.Println(os.Args[i])
-		sep=""
+	for _,arg:=range os.Args[1:]{
+		s+=arg
+		fmt.Println(arg)
+		arg=""
 	}
 	fmt.Println(s)
 }
